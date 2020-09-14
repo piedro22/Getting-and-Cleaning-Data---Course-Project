@@ -114,9 +114,17 @@ selected_DS <- rename(selected_DS, tBodyAcc_mean_X = V1, tBodyAcc_mean_Y = V2,
 
 ## Creating and saving a second tidy dataset with the average for each variable for each activity and subject
 
-    In order to do that, I created a new dataset through a series of functions, using the pipe operator. Firstly, I divided the original DS in groups by subject ID and activity using group_by(). Secondly, i used summarise_all to apply mean() summary statistics function to get the average of every variable for each group.Thus, my tidy dataset was complete.
-    I could have tried to create an axis variable to use X, Y or Z as its values, but it seemed to much trouble for not enough gain. In fact, this wider dataset format is also an acceptable tidying strategy according to Hadley Wickham's paper "Tidy Data". My dataset has the 3 basic criteria for being a tidy dataset: 1 - One variable per column, 2 - One observation per row, and 3 - Only one type of observational unit in the table.
-    Finally, I just saved the tidy dataset into my WD as as .txt file.
+    In order to do that, I created a new dataset through a series of functions, using the pipe operator. 
+    Firstly, I divided the original DS in groups by subject ID and activity using group_by(). 
+    Secondly, i used summarise_all to apply mean() summary statistics function to get the average of every variable for each group.
+    Thus, my tidy dataset was complete.
+    I could have tried to create an axis variable to use X, Y or Z as its values, but it seemed to much trouble for not enough gain. 
+    In fact, this wider dataset format is also an acceptable tidying strategy according to Hadley Wickham's paper "Tidy Data". 
+    My dataset has the 3 basic criteria for being a tidy dataset: 
+        1 - One variable per column, 
+        2 - One observation per row, 
+        3 - Only one type of observational unit in the table.
+    Finally, I just saved the tidy dataset into my WD as a .txt file.
     
 ``` 
 final_tidy_DS <- selected_DS %>%
