@@ -66,7 +66,7 @@ V503, V504, V516, V517, V529, V530, V542, V543))`
     
 
 ``` 
-selected\_DS\(activity <- factor(selected_DS\)activity, levels = c(1:6),
+selected_DS(activity <- factor(selected_DS)activity, levels = c(1:6),
 labels = c(“walking”, “walking upstairs”, “walking downstairs”,
 “sitting”, “standing”, “laying”))`
 ``` 
